@@ -26,3 +26,10 @@ Example Test Configurations
 
 Performance Impacts
 ------------
+
+Future Improvements
+------------
+
+* Store Test Configuration in Database
+* Provide Spectre UI webpage for creating/editing tests
+* Provide Logging to see Requests that triggered a test
