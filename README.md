@@ -25,6 +25,8 @@ Specifying items in the Trigger also means that ALL those conditions have to be 
 How To Configure
 ------------
 
+TBC
+
 Example Test Configurations
 ------------
 
@@ -47,6 +49,8 @@ Example Test Configurations
 
 Performance Impacts
 ------------
+
+TBC
 
 Future Improvements
 ------------
