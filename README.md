@@ -24,6 +24,23 @@ How To Configure
 Example Test Configurations
 ------------
 
+    {
+        "id": "password-generation-bad-request",
+        "name": "Password Generation Bad Request Test",
+        "service": "passgen",
+        "invocationCount": 100,
+        "response": null,
+        "responseCode": 400,
+        "trigger": {
+            "headers": null,
+            "parameters": null,
+            "query": null,
+            "body": {
+                "length": 12
+            }
+        }
+    }
+
 Performance Impacts
 ------------
 
