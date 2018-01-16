@@ -3,9 +3,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/ZeroDependency/spectre/pkg/spectre"
 	"github.com/gin-gonic/gin"
-
-	"zerodependency.co.uk/spectre/pkg/spectre"
 )
 
 const (

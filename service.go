@@ -3,9 +3,8 @@ package main
 import (
 	"net/http"
 
+	"github.com/ZeroDependency/spectre/pkg/spectre"
 	"github.com/gin-gonic/gin"
-
-	"zerodependency.co.uk/spectre/pkg/spectre"
 )
 
 func httpGetSpectreTestsForService(c *gin.Context) {

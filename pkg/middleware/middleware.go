@@ -8,8 +8,8 @@ import (
 	"os"
 	"time"
 
+	"github.com/ZeroDependency/spectre/pkg/spectre"
 	"github.com/gin-gonic/gin"
-	"zerodependency.co.uk/spectre/pkg/spectre"
 )
 
 // SpectreCheckTimeout determines how often to query the Spectre Server for Test updates
