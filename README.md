@@ -32,7 +32,8 @@ Simply include the SpectreTest middleware at a Global, Route or Handler level (b
 ~~~
 r := gin.Default()
 
-r.Use(middleware.SpectreTest("passgen")) // The value passed here should match the 'service' parameter from the test definition
+// The value passed here should match the 'service' parameter from the test definition
+r.Use(middleware.SpectreTest("passgen"))
 
 r.POST("/password/generate/:id", httpPostPassword)
 r.Run(fmt.Sprintf("%v:%v", ipAddress, port))
