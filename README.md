@@ -87,3 +87,7 @@ Future Improvements
 * Provide Spectre UI webpage for creating/editing tests
 * Provide Logging to see Requests that triggered a test
 * Remove coupling with Gin Gonic (move away from gin.Context to http.Request)
+* Performance Improvements
+* Unit/Integration Testing and Coverage Reports
+* Memcache-style Cache Layer to prevent querying Spectre Server
+* User definable Cache Timeout for Middleware Client (currently hard-coded to 60 seconds)
