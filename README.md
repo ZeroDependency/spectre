@@ -25,7 +25,18 @@ Specifying items in the Trigger also means that ALL those conditions have to be 
 How To Configure
 ------------
 
-TBC
+go get github.com/ZeroDependency/spectre
+
+Simply include the SpectreTest middleware at a Global, Route or Handler level (best used as a global middleware)
+
+~~~
+r := gin.Default()
+
+r.Use(middleware.SpectreTest("passgen")) // The value passed here should match the 'service' parameter from the test definition
+
+r.POST("/password/generate/:id", httpPostPassword)
+r.Run(fmt.Sprintf("%v:%v", ipAddress, port))
+~~~
 
 Test Definition Configuration
 ------------
