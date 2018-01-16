@@ -27,10 +27,10 @@ How To Configure
 
 TBC
 
-Configuration
+Test Definition Configuration
 ------------
 
-Configuration files should be stored in a folder called definitions in the Spectre server working directory. They are JSON files with one test definition per file. The filename is not imporant. Below is an example configuration that triggers when a member of the Body data structure called "length" has a value of 12.
+Test Definition Configuration files should be stored in a folder called definitions in the Spectre server working directory. They are JSON files with one test definition per file. The filename is not imporant. Below is an example configuration that triggers when a member of the Body data structure called "length" has a value of 12.
 
     {
         "id": "password-generation-bad-request",
@@ -50,19 +50,19 @@ Configuration files should be stored in a folder called definitions in the Spect
     }
 
 id
-    : Unique identifier of the test definition (string)
+  : Unique identifier of the test definition (string)
 name
-    : Friendly name to desribe the test (string)
+  : Friendly name to desribe the test (string)
 service
-    : The service identifier this is related to. You specify a service in the Middleware configuration of the service under simulation (string)
+  : The service identifier this is related to. You specify a service in the Middleware configuration of the service under simulation (string)
 invocationCount
-    : Once this number of invocations has been reached, the test is removed from the definition cache and is no longer executed (number)
+  : Once this number of invocations has been reached, the test is removed from the definition cache and is no longer executed (number)
 response
-    : The JSON body to respond with when a call matches the trigger requirements
+  : The JSON body to respond with when a call matches the trigger requirements
 responseCode
-    : The HTTP Status code to respond with when a call matches the trigger requirements (number)
+  : The HTTP Status code to respond with when a call matches the trigger requirements (number)
 trigger
-    : This structure describes the trigger conditions. If all sections are null, the test is ignored. It is essentially a number of key/value lists
+  : This structure describes the trigger conditions. If all sections are null, the test is ignored. It is essentially a number of key/value lists
 
 Performance Impacts
 ------------
