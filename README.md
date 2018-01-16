@@ -49,6 +49,10 @@ Test Definition Configuration files should be stored in a folder called definiti
         }
     }
 
+| Parameter | Use | Type |
+| --- | --- | --- |
+| id | Unique identifier of the test definition (string) | string |
+
 id
   : Unique identifier of the test definition (string)
 name
