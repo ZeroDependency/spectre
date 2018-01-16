@@ -26,7 +26,7 @@ How To Configure
 ------------
 
 ~~~
-go get github.com/ZeroDependency/spectre
+go get -u github.com/ZeroDependency/spectre
 ~~~
 
 Simply include the SpectreTest middleware at a Global, Route or Handler level (best used as a global middleware)
