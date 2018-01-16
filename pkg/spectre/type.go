@@ -15,6 +15,7 @@ type Test struct {
 	ID              string       `json:"id"`
 	Name            string       `json:"name"`
 	Service         string       `json:"service"`
+	URL             string       `json:"url"`
 	InvocationCount int64        `json:"invocationCount"`
 	Response        *interface{} `json:"response"`
 	ResponseCode    int          `json:"responseCode"`
@@ -44,6 +45,10 @@ func (t *Trigger) HasTrigger() bool {
 // IsTriggered returns true if the Gin Context matches the Trigger conditions.
 func (t *Test) IsTriggered(c *gin.Context) bool {
 	if !t.Trigger.HasTrigger() {
+		return false
+	}
+
+	if t.URL != c.Request.URL.String() {
 		return false
 	}
 
