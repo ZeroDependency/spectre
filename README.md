@@ -18,6 +18,10 @@ Take the rather trivial example of a new user sign up, and wanting to ensure tha
 
 Spectre allows you to do away with that and instead provide a simple JSON configuration file to the Spectre Server that says "When x conditions are met, return y with an HTTP status code of z". You're not needing to insert data for the lifetime of the test, you're not testing the business logic of the API itself (which is not what you're concerned about) instead you are getting a perfectly valid response under conditions you control, and ensure that your application performs how it should. With no cleanup required aferwards.
 
+Becase Spectre is designed to allow you to run Simulation Testing against Production environments, it specifies an invocationCount in the configuration, once this number of invocations have been reached, the test will be no longer be run. This helps ensure that any bad tests do not cause any runaway issues. 
+
+Specifying items in the Trigger also means that ALL those conditions have to be met, allowing you to be as granular as necessary to reduce impact on normal users.
+
 How To Configure
 ------------
 
@@ -50,3 +54,4 @@ Future Improvements
 * Store Test Configuration in Database
 * Provide Spectre UI webpage for creating/editing tests
 * Provide Logging to see Requests that triggered a test
+* Remove coupling with Gin Gonic (move away from gin.Context to http.Request)
