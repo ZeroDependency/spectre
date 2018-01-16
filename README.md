@@ -1,6 +1,9 @@
 Spectre - A Golang Gin Gonic Middleware Framework for Distributed Simulation Testing
 ============
 
+Description
+------------
+
 Inspired by https://medium.com/netflix-techblog/https-medium-com-netflix-techblog-simone-a-distributed-simulation-service-b2c85131ca1b I wanted to write a similar system to use in the numerous projects that I'm working on. 
 
 As a small team it is important to be able to include as much automated testing as possible to ensure that the code I'm working does the job I intend. In larger teams when you have dozens or even hundreds of developers working on a project, it becomes impossible for a QA team to easily test everything that is being worked on so, again, automated testing comes in handy.
@@ -14,3 +17,12 @@ Whilst many testing frameworks require you to create seed data this can get tedi
 Take the rather trivial example of a new user sign up, and wanting to ensure that the mobile app prompts the user to verify their email address if it hasn't been done so. Using a normal testing framework you would need to either enter data directly into a database or hit an endpoint to generate a new user. If you're working with an existing database, you need to ensure that the email address and user details you're using in your test are unique. You're then also creating a new user every time the test runs.
 
 Spectre allows you to do away with that and instead provide a simple JSON configuration file to the Spectre Server that says "When x conditions are met, return y with an HTTP status code of z". You're not needing to insert data for the lifetime of the test, you're not testing the business logic of the API itself (which is not what you're concerned about) instead you are getting a perfectly valid response under conditions you control, and ensure that your application performs how it should. With no cleanup required aferwards.
+
+How To Configure
+------------
+
+Example Test Configurations
+------------
+
+Performance Impacts
+------------
