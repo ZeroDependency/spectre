@@ -41,6 +41,15 @@ r.POST("/password/generate/:id", httpPostPassword)
 r.Run(fmt.Sprintf("%v:%v", ipAddress, port))
 ~~~
 
+Running Spectre Server
+
+~~~
+make
+./bin/spectre
+~~~
+
+This will have the Spectre Server running on port 18080 and searching a folder call definitions for test definitions. Ensure your servers with the Spectre Middleware have an appropriate SPECTRE_SERVER environment variable set up (for eg "http://localhost:18080")
+
 Test Definition Configuration
 ------------
 
