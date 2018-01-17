@@ -17,12 +17,12 @@ const SpectreCheckTimeout = time.Second * 60
 
 var cacheCheckTime *time.Time
 var testCache []*spectre.Test
+var spectreServer = os.Getenv("SPECTRE_SERVER")
 
 // SpectreTest is a helper function to create a Gin Handler that wraps the call in a check for valid Spectre Test
 func SpectreTest(service string) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		if cacheCheckTime == nil || time.Since(*cacheCheckTime) > SpectreCheckTimeout {
-			spectreServer := os.Getenv("SPECTRE_SERVER")
 			if spectreServer == "" {
 				spectreServer = "http://localhost:18080"
 			}

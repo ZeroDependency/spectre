@@ -6,9 +6,12 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
+
+var spectreServer = os.Getenv("SPECTRE_SERVER")
 
 // Test represents a single Spectre Test defintion
 type Test struct {
@@ -101,7 +104,11 @@ func (t *Test) IsTriggered(c *gin.Context) bool {
 
 // Invoke marks the Test as invoked and reduces the available invocation count.
 func (t *Test) Invoke() {
-	spectreURL := fmt.Sprintf("http://%v:%v/api/v1/spectre/tests/%v/invoke", "localhost", "18080", t.ID)
+	if spectreServer == "" {
+		spectreServer = "http://localhost:18080"
+	}
+
+	spectreURL := fmt.Sprintf("%v/api/v1/spectre/tests/%v/invoke", spectreServer, t.ID)
 	http.Post(spectreURL, "application/json", nil)
 
 	t.InvocationCount--
