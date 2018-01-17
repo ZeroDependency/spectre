@@ -1,4 +1,4 @@
-Spectre - A Golang Gin Gonic Middleware Framework for Distributed Simulation Testing
+Spectre - Golang Gin Gonic Middleware Framework for Distributed Simulation Testing
 ============
 
 Description
